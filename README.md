@@ -64,7 +64,16 @@ sudo pip3 install docker-compose
 -------------
 # 2. Installation
 
-Clone this repository 
+Clone this repository.
+
+Here two different techniques
+
+- Method 1: Download as Zip
+
+On this webpage, click on the green button "<> Code" and then "Download ZIP".
+Unzip the zip, and verify that you have a folder named `earning-machine` containing this repo.
+
+- Method 2: Using git clone
 
 The following command will create a folder `earning-machine` and clone the repository inside it.
 
