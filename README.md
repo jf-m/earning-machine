@@ -272,12 +272,14 @@ When `Successfully logged in to Bitping` is displayed, you can safely kill the c
 -------------
 # 4. Running the stack
 
-To run the stack and start earning money, execute the following command in this project directory:
+To run the stack and start earning money, execute the following command in this project directory (`earning-machine`):
 
 `docker-compose up -d`
 
 -------------
 # 5. Support
+
+If you have any questions, feel free to open an issue here, I'll answer.
 
 If you like this project, use the referral links provided on this README.md file to support it.
 
