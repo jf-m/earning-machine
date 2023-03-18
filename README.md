@@ -66,7 +66,7 @@ sudo pip3 install docker-compose
 
 Clone this repository.
 
-Here two different techniques
+Here are two different techniques
 
 - Method 1: Download as Zip
 
