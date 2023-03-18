@@ -90,6 +90,10 @@ Once done, I recommend that you move the directory called `earning-machine` to s
 
 The following steps will guide you through the account creation and the configuration of the [`docker-compose.yml`](docker-compose.yml) file for each passive income application.
 
+During these steps, you'll be required to open your copy of the [`docker-compose.yml`](docker-compose.yml) located in your `earning-machine` directory with a text editor such as `vim`, `sublime text`, `NotePad`, `TextEdit`. Then, follow the next steps and find/replace each "Variable" by your own value (email address, password, identification, ... it depends on the application).
+
+## Extra explanations
+
 These apps won't use much RAM/CPU, but should you need to narrow down these apps to the best ones only, each app is ranked using the following emojis:
 
 - 🟩 High yield earnings
