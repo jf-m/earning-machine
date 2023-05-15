@@ -94,11 +94,34 @@ services:
         restart: always
         environment:
            - RP_EMAIL=YOUR_REPOCKET_EMAIL_ADDRESS
-           - RP_PASSWORD=YOUR_REPOCKET_USER_PASSWORD
+           - RP_API_KEY=YOUR_REPOCKET_API_KEY
         networks:
             default:
                 ipv4_address: 172.106.0.80
     #end of Repocket Configuration
+
+    #Proxylite Configuration
+    proxylite:
+        image: proxylite/proxyservice:latest
+        restart: always
+        environment:
+          - USER_ID=YOUR_PROXYLITE_ACCOUNT_ID
+        networks:
+            default:
+                ipv4_address: 172.106.0.90
+    #end of Proxylite Configuration
+
+    #ProxyRack Configuration
+    proxyrack:
+        image: proxyrack/pop:latest
+        restart: always
+        environment:
+          - api_key=YOUR_PROXYRACK_API_KEY
+          - device_name=EarningMachine
+        networks:
+            default:
+                ipv4_address: 172.106.0.100
+    #end of ProxyRack Configuration
 
 networks:
     default:

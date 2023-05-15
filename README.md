@@ -16,10 +16,12 @@ You can use this project on any device that supports docker. This includes : Ras
 	+ [PacketStream](#-packetstream)
 	+ [HoneyGain](#-honeygain)
 	+ [EarnApp](#-earnapp)
+	+ [ProxyLite](#-proxylite)
 	+ [Repocket](#-repocket)
 	+ [TraffMonetizer](#-traffmonetizer)
 	+ [Pawns](#-pawns)
 	+ [Bitping](#-bitping)
+	+ [ProxyRack](#-proxyrack)
 - [Running the stack](#4-running-the-stack)
 - [Support](#5-support)
 
@@ -162,6 +164,7 @@ In the [`docker-compose.yml`](docker-compose.yml), edit :
 | --------- | -----|
 | `YOUR_HONEYGAIN_EMAIL_ADDRESS`  | HoneyGain account address |
 | `YOUR_USER_HONEYGAIN_PASSWORD`  |   HoneyGain account password |
+| `-device`  | (optional) A device name for display purposes, default is `EarningMachine` must be unique per IP/machine |
 
 
 ## 🟧 EarnApp
@@ -200,6 +203,22 @@ In the [`docker-compose.yml`](docker-compose.yml), edit :
 | `YOUR_EARNAPP_NODE_ID`  | EarnApp Node Id |
 
 
+## 🟫 ProxyLite
+
+### Account creation
+
+Create your account on the following website
+
+[https://proxylite.ru](https://proxylite.ru/?r=KYRQJMJP "https://proxylite.ru/")
+
+### Update the docker-compose
+
+In the [`docker-compose.yml`](docker-compose.yml), edit :
+
+| Variable  | Description |
+| --------- | -----|
+| `YOUR_PROXYLITE_ACCOUNT_ID`  | ProxyLite Account id can be found in the dashboard (https://lk.proxylite.ru/index.php/) |
+
 ## 🟫 Repocket
 
 ### Account creation
@@ -215,7 +234,7 @@ In the [`docker-compose.yml`](docker-compose.yml), edit :
 | Variable  | Description |
 | --------- | -----|
 | `YOUR_REPOCKET_EMAIL_ADDRESS`  | Repocket account address |
-| `YOUR_REPOCKET_USER_PASSWORD`  | Repocket account password |
+| `YOUR_REPOCKET_API_KEY`  | Repocket API Key can be found in the dashboard (https://app.repocket.co/) |
 
 
 ## 🟫 TraffMonetizer
@@ -268,6 +287,25 @@ Execute the following command and follow the BitPing steps (enter your BitPing c
 `sudo docker run -it -v $(pwd)/data/bitping/:/root/.bitping bitping/bitping-node:latest`
 
 When `Successfully logged in to Bitping` is displayed, you can safely kill the container with `CTRL+C` or `CMD+C`.
+
+
+## 🟥 ProxyRack
+
+### Account creation
+
+Create your account on the following website
+
+[https://peer.proxyrack.com/register](https://peer.proxyrack.com/ref/vra2bkrior8n3nb1rna0wxivorer0aflnyjhp4xl "https://peer.proxyrack.com/register")
+
+### Update the docker-compose
+
+In the [`docker-compose.yml`](docker-compose.yml), edit :
+
+| Variable  | Description |
+| --------- | -----|
+| `YOUR_PROXYRACK_API_KEY`  | ProxyRack Api key can be generated in the profile section of your account (https://peer.proxyrack.com/profile) |
+| `device_name`  | (optional) A device name for display purposes, default is `EarningMachine` must be unique per IP/machine |
+
 
 -------------
 # 4. Running the stack
