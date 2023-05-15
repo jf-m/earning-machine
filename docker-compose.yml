@@ -28,7 +28,7 @@ services:
         image: peer2profit/peer2profit_x86_64:latest
         restart: always
         environment:
-            - P2P_EMAIL='YOUR_PEER2PROFIT_EMAIL_ADDRESS
+            - P2P_EMAIL=YOUR_PEER2PROFIT_EMAIL_ADDRESS
         networks:
             default:
                 ipv4_address: 172.106.0.30
