@@ -25,7 +25,7 @@ services:
 
     #Peer2Profit Configuration
     peer2profit:
-        image: peer2profit/peer2profit_x86_64:latest
+        image: lyenliang/peer2profit_x86_64:latest
         restart: always
         environment:
             - P2P_EMAIL=YOUR_PEER2PROFIT_EMAIL_ADDRESS
