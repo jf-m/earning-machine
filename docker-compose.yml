@@ -2,126 +2,26 @@ version: '3.5'
 
 services:
 
-    #EarnApp Configuration
-    earnapp:
-        image: fazalfarhan01/earnapp:lite
-        restart: always
-        environment:
-            - EARNAPP_UUID=YOUR_EARNAPP_NODE_ID
-        networks:
-            default:
-                ipv4_address: 172.106.0.10
-    #end of EarnApp Configuration
-
     #HoneyGain Configuration
     honeygain:
         image: honeygain/honeygain
-        command: -tou-accept -email 'YOUR_HONEYGAIN_EMAIL_ADDRESS' -pass 'YOUR_USER_HONEYGAIN_PASSWORD' -device EarningMachine
-        restart: always
+        platform: linux/amd64
+        command: -tou-accept -email 'harrypoterbaoboituthan@gmail.com' -pass 'Anhbeos123@' -device EarningMachine
+        restart: unless-stopped
         networks:
             default:
                 ipv4_address: 172.106.0.20
     #end of HoneyGain Configuration
 
-    #Peer2Profit Configuration
-    peer2profit:
-        image: lyenliang/peer2profit_x86_64:latest
-        restart: always
-        environment:
-            - P2P_EMAIL=YOUR_PEER2PROFIT_EMAIL_ADDRESS
+    #TraffMonetizer Configuration
+    traffmonetizer:
+        image: traffmonetizer/cli_v2:arm64v8
+        restart: unless-stopped
+        command: start accept --token X1fXYApdNEfkdO73FhtZUYGOIny0h8+xt0GjTi47dLw=
         networks:
             default:
                 ipv4_address: 172.106.0.30
-    #end of Peer2Profit Configuration
-
-    #PacketStream Configuration
-    psclient:
-        image: packetstream/psclient:latest
-        restart: always
-        environment:
-            - CID=YOUR_PACKETSTREAM_CID
-        networks:
-            default:
-                ipv4_address: 172.106.0.40
-
-    pswatchtower:
-        depends_on:
-            - psclient
-        image: containrrr/watchtower
-        command: --cleanup --include-stopped --revive-stopped --interval 60 earning-machine_psclient_1
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-        restart: always
-        networks:
-            default:
-                ipv4_address: 172.106.0.41
-    #end of PacketStream Configuration
-
-    #Pawns Configuration
-    pawns:
-        image: iproyal/pawns-cli:latest
-        command: -email='YOUR_PAWNS_EMAIL_ADDRESS' -password='YOUR_PAWNS_USER_PASSWORD' -device-name=EarningMachine -accept-tos
-        restart: always
-        networks:
-            default:
-                ipv4_address: 172.106.0.50
-    #end of Pawns Configuration
-    
-    #Bitping Configuration
-    bitping:
-        image: bitping/bitping-node:latest
-        restart: always
-        volumes:
-            - ./data/bitping:/root/.bitping
-        networks:
-            default:
-                ipv4_address: 172.106.0.60
-    #end of Bitping Configuration
-
-    #TraffMonetizer Configuration
-    traffmonetizer:
-        image: traffmonetizer/cli:latest
-        restart: always
-        command: start accept --token YOUR_TRAFFMONETIZER_TOKEN
-        networks:
-            default:
-                ipv4_address: 172.106.0.70
     #end of TraffMonetizer Configuration
-
-    #Repocket Configuration
-    repocket:
-        image: repocket/repocket:latest
-        restart: always
-        environment:
-           - RP_EMAIL=YOUR_REPOCKET_EMAIL_ADDRESS
-           - RP_API_KEY=YOUR_REPOCKET_API_KEY
-        networks:
-            default:
-                ipv4_address: 172.106.0.80
-    #end of Repocket Configuration
-
-    #Proxylite Configuration
-    proxylite:
-        image: proxylite/proxyservice:latest
-        restart: always
-        environment:
-          - USER_ID=YOUR_PROXYLITE_ACCOUNT_ID
-        networks:
-            default:
-                ipv4_address: 172.106.0.90
-    #end of Proxylite Configuration
-
-    #ProxyRack Configuration
-    proxyrack:
-        image: proxyrack/pop:latest
-        restart: always
-        environment:
-          - api_key=YOUR_PROXYRACK_API_KEY
-          - device_name=EarningMachine
-        networks:
-            default:
-                ipv4_address: 172.106.0.100
-    #end of ProxyRack Configuration
 
 networks:
     default:
