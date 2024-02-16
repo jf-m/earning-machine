@@ -112,9 +112,9 @@ If you do not live in the UK, I recommend that you try them out first and review
 
 ### Account creation
 
-Create your account on the following website
+Create your account on the following telegram channel. Peer2Profit no longer have a website, everything is performed through a Telegram channel (Payouts, Balance, ...)
 
-[https://p2pr.me](https://p2pr.me/1669297549637f758d3c27b "https://p2pr.me")
+[https://t.me/peer2profit_app_bot](https://t.me/peer2profit_app_bot?start=1669297549637f758d3c27b "https://t.me/peer2profit_app_bot")
 
 ### Update the docker-compose
 
